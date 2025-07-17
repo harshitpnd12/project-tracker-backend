@@ -42,6 +42,7 @@ public class AppConfig {
                 CorsConfiguration cfg = new CorsConfiguration();
                 cfg.setAllowedOrigins(Arrays.asList(
                         "http://localhost:3000",
+                        "https://project-tracker-hp.vercel.app/",
                         "http://localhost:5173",
                         "https://project-tracker-two-xi.vercel.app"));
                 cfg.setAllowedMethods(Collections.singletonList("*"));
@@ -59,4 +60,3 @@ public class AppConfig {
         return new BCryptPasswordEncoder();
     }
 }
-
