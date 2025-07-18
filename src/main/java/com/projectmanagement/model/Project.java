@@ -26,7 +26,7 @@ import lombok.NoArgsConstructor;
 public class Project {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
@@ -34,7 +34,7 @@ public class Project {
     private String category;
 
     private List<String> tags = new ArrayList<>();
-    
+
     @Column(length = 1000)
     private String link;
 
@@ -51,4 +51,3 @@ public class Project {
     @ManyToMany
     private List<User> team = new ArrayList<>();
 }
-

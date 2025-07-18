@@ -20,7 +20,7 @@ import lombok.Data;
 public class Issue {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String title;
@@ -35,7 +35,7 @@ public class Issue {
     private User assignee;
 
     @ManyToOne
-    private User reporter; 
+    private User reporter;
 
     @JsonIgnore
     @ManyToOne
@@ -45,4 +45,3 @@ public class Issue {
     @OneToMany(mappedBy = "issue", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> comments = new ArrayList<>();
 }
-

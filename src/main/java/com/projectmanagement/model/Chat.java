@@ -24,7 +24,7 @@ import lombok.NoArgsConstructor;
 public class Chat {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
@@ -39,3 +39,5 @@ public class Chat {
     @ManyToMany
     private List<User> users = new ArrayList<>();
 }
+
+// @GeneratedValue(strategy = GenerationType.AUTO)

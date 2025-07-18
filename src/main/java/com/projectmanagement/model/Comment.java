@@ -1,6 +1,5 @@
 package com.projectmanagement.model;
 
-
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
@@ -19,7 +18,7 @@ import lombok.NoArgsConstructor;
 public class Comment {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String content;
