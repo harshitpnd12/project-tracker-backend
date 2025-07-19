@@ -34,4 +34,7 @@ public class User {
     private List<Issue> assignedIssues = new ArrayList<>();
 
     private String projectSize;
+
+    private String resetToken;
+
 }

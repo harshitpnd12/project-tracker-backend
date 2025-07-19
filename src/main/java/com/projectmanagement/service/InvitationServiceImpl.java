@@ -1,12 +1,14 @@
 package com.projectmanagement.service;
 
-import com.projectmanagement.model.Invitation;
-import com.projectmanagement.repository.InvitationRepository;
-import jakarta.mail.MessagingException;
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.UUID;
+import com.projectmanagement.model.Invitation;
+import com.projectmanagement.repository.InvitationRepository;
+
+import jakarta.mail.MessagingException;
 
 @Service
 public class InvitationServiceImpl implements InvitationService {
@@ -31,7 +33,8 @@ public class InvitationServiceImpl implements InvitationService {
 
         // String invitationLink = "http://localhost:5173/accept_invitation?token=" +
         // invitationToken;
-        String invitationLink = "https://project-tracker-hp.vercel.app/accept_invitation?token=" + invitationToken;
+        String invitationLink = "https://project-tracker-hp.vercel.app/accept_invitation?token=" +
+                invitationToken;
         emailService.sendEmailWithToken(email, invitationLink);
     }
 
